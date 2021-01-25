@@ -12,11 +12,11 @@ const counterValue = document.querySelector('#value');
 let value = 0;
 const increment = () => { 
     value +=1; 
-    counterValue.innerHTML = value;
+    counterValue.textContent = value;
 };
 const decrement = () => { 
     value -=1; 
-    counterValue.innerHTML = value;
+    counterValue.textContent = value;
 };
 
 incrementBtn.addEventListener('click', increment);

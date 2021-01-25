@@ -10,12 +10,13 @@ const outputNameRef = document.querySelector('#name-output');
 
 document.addEventListener('input', () => {
     //const { value } = inputNameRef;
-    if(inputNameRef.value) {
-        outputNameRef.textContent = inputNameRef.value;
-    }
-    else {
-        outputNameRef.textContent = 'незнакомец';  
-    };
+    // if(inputNameRef.value) {
+    //     outputNameRef.textContent = inputNameRef.value;
+    // }
+    // else {
+    //     outputNameRef.textContent = 'незнакомец';  
+    // };
+    outputNameRef.textContent = inputNameRef.value || 'незнакомец';
 })
 
  
