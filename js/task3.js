@@ -28,14 +28,14 @@ const images = [
 
 const galleryRef = document.querySelector('#gallery');
 
-const imgRef = images.map(obj => {
- 
-  const lisRef = document.createElement('li');
+const lisRef = images.map(obj => {
+ const lisRef = document.createElement('li');
      const imgRef = document.createElement('img');
       imgRef.classList.add('images');
       imgRef.setAttribute('src', obj.url);
       imgRef.setAttribute('alt', obj.alt);
       lisRef.append(imgRef);
-      galleryRef.appendChild(lisRef);
      return lisRef;
 });
+
+galleryRef.append(...lisRef);

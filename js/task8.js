@@ -34,7 +34,6 @@ renderBtn.addEventListener('click', (event) => {
 
 destroyBtn.addEventListener('click', (event) => {
     destroyBoxes();
-    location.reload();
 });
 
 
@@ -56,10 +55,13 @@ const createBoxes = (amount => {
   `;
     boxesRef.appendChild(divRef);
     counter += 1;
+    
     }
+    return;
 });
 
 const destroyBoxes = (event => {
-    boxesRef.outerHTML = '';  
+    boxesRef.outerHTML = ''; 
+    inputRef.value = '';  
     console.dir(boxesRef);
 });
