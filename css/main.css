@@ -1,0 +1,36 @@
+#gallery {
+    display: flex;
+    Justify-content: space-around;
+ }  
+
+li {
+   list-style: none;
+ }
+ 
+   .images  {
+      max-width: 200px;
+      height: 120px;
+   }
+/* ============================================ */
+#counter {
+margin-bottom: 20px;
+}
+
+/* ========================================== */
+ #validation-input {
+      border: 3px solid #bdbdbd;
+      display: block;
+      margin-bottom: 20px;
+    }
+   
+    #validation-input.valid {
+      border-color: #4caf50;
+    }
+   
+    #validation-input.invalid {
+      border-color: #f44336;
+    }
+
+#controls {
+   margin-top: 20px;
+}
