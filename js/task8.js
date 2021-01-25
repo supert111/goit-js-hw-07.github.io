@@ -33,9 +33,12 @@ renderBtn.addEventListener('click', (event) => {
 });
 
 destroyBtn.addEventListener('click', (event) => {
-    destroyBoxes();
+    destroyBoxes(); 
+    // const boxesRef = document.createElement('div');
+    // boxesRef.setAttribute('id', 'boxes');
+    // inputRef.insertAdjacentElement('afterend', boxesRef);
+    // console.dir(boxesRef);
 });
-
 
 let counter = 0;
 let numbSize = 20;
@@ -57,11 +60,11 @@ const createBoxes = (amount => {
     counter += 1;
     
     }
-    return;
+    counter = 0;
+    return ;
 });
 
 const destroyBoxes = (event => {
-    boxesRef.outerHTML = ''; 
+    boxesRef.outerHTML = '';
     inputRef.value = '';  
-    console.dir(boxesRef);
 });

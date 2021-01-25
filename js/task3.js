@@ -29,13 +29,16 @@ const images = [
 const galleryRef = document.querySelector('#gallery');
 
 const lisRef = images.map(obj => {
- const lisRef = document.createElement('li');
-     const imgRef = document.createElement('img');
-      imgRef.classList.add('images');
-      imgRef.setAttribute('src', obj.url);
-      imgRef.setAttribute('alt', obj.alt);
-      lisRef.append(imgRef);
+  const lisRef = `<li><img class='images', src=${obj.url} alt=${obj.alt}></li>`;
+//  const lisRef = document.createElement('li');
+//      const imgRef = document.createElement('img');
+//       imgRef.classList.add('images');
+//       imgRef.setAttribute('src', obj.url);
+//       imgRef.setAttribute('alt', obj.alt);
+//       lisRef.append(imgRef);
      return lisRef;
 });
 
-galleryRef.append(...lisRef);
+//galleryRef.append(...lisRef);
+galleryRef.insertAdjacentHTML('afterbegin', lisRef);
+console.dir(galleryRef);
